@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="my_location">My Location</string>
+	<string name="app_name">Catch&amp;Run</string>
+	<string name="nearby_areas">Nearby Areas:</string>
+	<string name="satellite_map">Satellite Map</string>
+	<string name="street_map">Street Map</string>
+	<string name="hide">Hide Me</string>
+	<string name="reveal">Reveal Me</string>
+	<string name="close">Close</string>
+	<string name="leave">Leave Game</string>
+	<string name="idling">Idling</string>
+	<string name="navigate">Navigate</string>
+	<string name="catching">Catching</string>
+	<string name="running_from">Running from</string>
+	<string name="hidden">Hidden</string>
+	<string name="sec_remain">sec remaining</string>
+	<string name="outside_area">Outside area</string>
+	<string name="rules">Game Rules</string>
+	<string name="stop_navigation">Stop Navigation</string>
+	<string name="you">you</string>
+	<string name="treasure">Treasure</string>
+	<string name="treasure_value">Treasure value unknown</string>
+	<string name="rules_text">
+		Inside area, you are one of the three roles:\n
+		<b>Idler:</b>
+		\n
+		- broadcasts his location and can became catcher or runner in
+		distance 100-200 m from other idler\n
+		- earns $1/7s\n
+		- can find
+		treasure\n
+		<b>Catcher:</b>\n
+		- trying to catch a runner\n
+		- wins when close to runner &lt;15 m and
+		takes half of runner\'s money\n
+		<b>Runner:</b>\n
+		- trying to run from catcher\n
+		-wins when far from catcher &gt;500 m or
+		runs for 10 minutes and takes half of catcher\'s money\n\n
+		<b>Other rules:</b>
+		\n
+		-every player have limited \"offline time\" which can be spend by
+		hiding or technical offline\n
+		-when you leave area during chase, you
+		loose\n
+		-play fair-play and have fun!
+	</string>
+	<string name="you_have_won">You have won</string>
+	<string name="you_took">You took</string>
+	<string name="from_player">from player</string>
+	<string name="you_have_lost">You have lost</string>
+	<string name="you_lost">You lost</string>
+	<string name="to_player">to player</string>
+	<string name="become_catcher">Catcher!</string>
+	<string name="catch_player">Catch player</string>
+	<string name="asap">as soon as possible!</string>
+	<string name="become_runner">Runner!</string>
+	<string name="run_away_from">Run away from player</string>
+	<string name="treasure_found">Treasure found</string>
+	<string name="you_have_found">You have found</string>
+	<string name="inside_treasure_chest">inside treasure chest!</string>
+	<string name="not_possible">Not possible</string>
+	<string name="no_more_hidden_time">Not enough offline time to hide</string>
+	<string name="are_you_sure">Are you sure?</string>
+	<string name="leaving_will_cause_losing_game">Leaving game will cause loosing current chase!</string>
+	<string name="cancel">Cancel</string>
+	<string name="loading_area">Loading area ...</string>
+</resources>

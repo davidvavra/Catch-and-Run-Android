@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:icon="@drawable/my_location" android:id="@+id/my_location"
+		android:title="@string/my_location"></item>
+	<item android:icon="@drawable/hide" android:id="@+id/hide"
+		android:title="@string/hide"></item>
+	<item android:icon="@drawable/map_mode" android:id="@+id/map_mode"
+		android:title="@string/satellite_map"></item>
+	<item android:icon="@drawable/rules" android:id="@+id/rules"
+		android:title="@string/rules"></item>
+	<item android:icon="@drawable/leave" android:id="@+id/leave"
+		android:title="@string/leave"></item>
+</menu>
