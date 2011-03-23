@@ -22,6 +22,7 @@ public class AreasActivity extends ListActivity implements OnItemClickListener {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		//different line
 
 		List<HashMap<String, String>> areas = new ArrayList<HashMap<String, String>>();
 		HashMap<String, String> first = new HashMap<String, String>();
