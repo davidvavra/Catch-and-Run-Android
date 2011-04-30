@@ -276,7 +276,7 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
         public IntentAction(Context context, Intent intent, int drawable) {
             super(drawable);
             mContext = context;
-            mIntent = intent;
+            mIntent = intent;  
         }
 
         @Override
