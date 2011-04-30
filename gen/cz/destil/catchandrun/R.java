@@ -9,39 +9,75 @@ package cz.destil.catchandrun;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int title=0x7f010000;
     }
     public static final class color {
+        public static final int actionbar_background_end=0x7f050006;
+        public static final int actionbar_background_item_pressed_end=0x7f050008;
+        public static final int actionbar_background_item_pressed_start=0x7f050007;
+        public static final int actionbar_background_start=0x7f050005;
+        public static final int actionbar_separator=0x7f050003;
+        public static final int actionbar_title=0x7f050004;
         public static final int logo=0x7f050000;
         public static final int title=0x7f050001;
         public static final int title_text=0x7f050002;
     }
+    public static final class dimen {
+        public static final int actionbar_height=0x7f060000;
+        public static final int actionbar_item_height=0x7f060001;
+        public static final int actionbar_item_width=0x7f060002;
+    }
     public static final class drawable {
-        public static final int catcher=0x7f020000;
-        public static final int hide=0x7f020001;
-        public static final int icon=0x7f020002;
-        public static final int idler=0x7f020003;
-        public static final int leave=0x7f020004;
-        public static final int logo=0x7f020005;
-        public static final int map_mode=0x7f020006;
-        public static final int my_location=0x7f020007;
-        public static final int rules=0x7f020008;
-        public static final int runner=0x7f020009;
-        public static final int treasure=0x7f02000a;
+        public static final int actionbar_back_indicator=0x7f020000;
+        public static final int actionbar_background=0x7f020001;
+        public static final int actionbar_btn=0x7f020002;
+        public static final int actionbar_btn_normal=0x7f020003;
+        public static final int actionbar_btn_pressed=0x7f020004;
+        public static final int catcher=0x7f020005;
+        public static final int hide=0x7f020006;
+        public static final int icon=0x7f020007;
+        public static final int idler=0x7f020008;
+        public static final int leave=0x7f020009;
+        public static final int logo=0x7f02000a;
+        public static final int map_mode=0x7f02000b;
+        public static final int my_location=0x7f02000c;
+        public static final int rules=0x7f02000d;
+        public static final int runner=0x7f02000e;
+        public static final int treasure=0x7f02000f;
     }
     public static final class id {
-        public static final int hide=0x7f080002;
-        public static final int leave=0x7f080005;
-        public static final int map_mode=0x7f080003;
-        public static final int mapview=0x7f080000;
-        public static final int my_location=0x7f080001;
-        public static final int rules=0x7f080004;
+        public static final int actionbar_actions=0x7f0a0006;
+        public static final int actionbar_home=0x7f0a0001;
+        public static final int actionbar_home_bg=0x7f0a0003;
+        public static final int actionbar_home_btn=0x7f0a0004;
+        public static final int actionbar_home_is_back=0x7f0a0005;
+        public static final int actionbar_home_logo=0x7f0a0002;
+        public static final int actionbar_item=0x7f0a0009;
+        public static final int actionbar_progress=0x7f0a0007;
+        public static final int actionbar_title=0x7f0a0008;
+        public static final int hide=0x7f0a000c;
+        public static final int leave=0x7f0a000f;
+        public static final int map_mode=0x7f0a000d;
+        public static final int mapview=0x7f0a000a;
+        public static final int my_location=0x7f0a000b;
+        public static final int rules=0x7f0a000e;
+        public static final int screen=0x7f0a0000;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
-        public static final int map=0x7f030001;
+        public static final int actionbar=0x7f030000;
+        public static final int actionbar_item=0x7f030001;
+        public static final int main=0x7f030002;
+        public static final int map=0x7f030003;
     }
     public static final class menu {
-        public static final int map_menu=0x7f070000;
+        public static final int map_menu=0x7f090000;
     }
     public static final class raw {
         public static final int catcher=0x7f040000;
@@ -51,47 +87,83 @@ public final class R {
         public static final int won=0x7f040004;
     }
     public static final class string {
-        public static final int app_name=0x7f060001;
-        public static final int are_you_sure=0x7f060026;
-        public static final int asap=0x7f06001e;
-        public static final int become_catcher=0x7f06001c;
-        public static final int become_runner=0x7f06001f;
-        public static final int cancel=0x7f060028;
-        public static final int catch_player=0x7f06001d;
-        public static final int catching=0x7f06000b;
-        public static final int close=0x7f060007;
-        public static final int from_player=0x7f060018;
-        public static final int hidden=0x7f06000d;
-        public static final int hide=0x7f060005;
-        public static final int idling=0x7f060009;
-        public static final int inside_treasure_chest=0x7f060023;
-        public static final int leave=0x7f060008;
-        public static final int leaving_will_cause_losing_game=0x7f060027;
-        public static final int loading_area=0x7f060029;
-        public static final int my_location=0x7f060000;
-        public static final int navigate=0x7f06000a;
-        public static final int nearby_areas=0x7f060002;
-        public static final int no_more_hidden_time=0x7f060025;
-        public static final int not_possible=0x7f060024;
-        public static final int outside_area=0x7f06000f;
-        public static final int reveal=0x7f060006;
-        public static final int rules=0x7f060010;
-        public static final int rules_text=0x7f060015;
-        public static final int run_away_from=0x7f060020;
-        public static final int running_from=0x7f06000c;
-        public static final int satellite_map=0x7f060003;
-        public static final int sec_remain=0x7f06000e;
-        public static final int stop_navigation=0x7f060011;
-        public static final int street_map=0x7f060004;
-        public static final int to_player=0x7f06001b;
-        public static final int treasure=0x7f060013;
-        public static final int treasure_found=0x7f060021;
-        public static final int treasure_value=0x7f060014;
-        public static final int you=0x7f060012;
-        public static final int you_have_found=0x7f060022;
-        public static final int you_have_lost=0x7f060019;
-        public static final int you_have_won=0x7f060016;
-        public static final int you_lost=0x7f06001a;
-        public static final int you_took=0x7f060017;
+        public static final int app_name=0x7f070001;
+        public static final int are_you_sure=0x7f070026;
+        public static final int asap=0x7f07001e;
+        public static final int become_catcher=0x7f07001c;
+        public static final int become_runner=0x7f07001f;
+        public static final int cancel=0x7f070028;
+        public static final int catch_player=0x7f07001d;
+        public static final int catching=0x7f07000b;
+        public static final int close=0x7f070007;
+        public static final int from_player=0x7f070018;
+        public static final int hidden=0x7f07000d;
+        public static final int hide=0x7f070005;
+        public static final int idling=0x7f070009;
+        public static final int inside_treasure_chest=0x7f070023;
+        public static final int leave=0x7f070008;
+        public static final int leaving_will_cause_losing_game=0x7f070027;
+        public static final int loading_area=0x7f070029;
+        public static final int my_location=0x7f070000;
+        public static final int navigate=0x7f07000a;
+        public static final int nearby_areas=0x7f070002;
+        public static final int no_more_hidden_time=0x7f070025;
+        public static final int not_possible=0x7f070024;
+        public static final int outside_area=0x7f07000f;
+        public static final int reveal=0x7f070006;
+        public static final int rules=0x7f070010;
+        public static final int rules_text=0x7f070015;
+        public static final int run_away_from=0x7f070020;
+        public static final int running_from=0x7f07000c;
+        public static final int satellite_map=0x7f070003;
+        public static final int sec_remain=0x7f07000e;
+        public static final int stop_navigation=0x7f070011;
+        public static final int street_map=0x7f070004;
+        public static final int to_player=0x7f07001b;
+        public static final int treasure=0x7f070013;
+        public static final int treasure_found=0x7f070021;
+        public static final int treasure_value=0x7f070014;
+        public static final int you=0x7f070012;
+        public static final int you_have_found=0x7f070022;
+        public static final int you_have_lost=0x7f070019;
+        public static final int you_have_won=0x7f070016;
+        public static final int you_lost=0x7f07001a;
+        public static final int you_took=0x7f070017;
     }
+    public static final class style {
+        public static final int ActionBar=0x7f080000;
+        public static final int ActionBarHomeItem=0x7f080002;
+        public static final int ActionBarHomeLogo=0x7f080003;
+        public static final int ActionBarItem=0x7f080001;
+        public static final int ActionBarProgressBar=0x7f080004;
+    }
+    public static final class styleable {
+        /** Attributes that can be used with a ActionBar.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ActionBar_title cz.destil.catchandrun:title}</code></td><td></td></tr>
+           </table>
+           @see #ActionBar_title
+         */
+        public static final int[] ActionBar = {
+            0x7f010000
+        };
+        /**
+          <p>This symbol is the offset where the {@link cz.destil.catchandrun.R.attr#title}
+          attribute's value can be found in the {@link #ActionBar} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:title
+        */
+        public static final int ActionBar_title = 0;
+    };
 }
