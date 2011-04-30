@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 <com.google.android.maps.MapView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mapview"
@@ -7,6 +11,11 @@
     android:clickable="true"
     android:apiKey="0hHvNsQcV9FLxuB9hrRv9Yd2LPyEoOU1ggg3tPQ"
 />
+<com.markupartist.android.widget.ActionBar
+    android:id="@+id/actionbar"
+    style="@style/ActionBar"
+    />
+</RelativeLayout>
 <!--
  production API key: 0hHvNsQcV9FK3hEr77WtPl58m3r0kZe4f-jo2dQ
  debug API key: 0hHvNsQcV9FLxuB9hrRv9Yd2LPyEoOU1ggg3tPQ

@@ -43,16 +43,18 @@ containing a value of this type.
         public static final int catcher=0x7f020005;
         public static final int hide=0x7f020006;
         public static final int icon=0x7f020007;
-        public static final int idler=0x7f020008;
-        public static final int leave=0x7f020009;
-        public static final int logo=0x7f02000a;
-        public static final int map_mode=0x7f02000b;
-        public static final int my_location=0x7f02000c;
-        public static final int rules=0x7f02000d;
-        public static final int runner=0x7f02000e;
-        public static final int treasure=0x7f02000f;
+        public static final int icon_actionbar=0x7f020008;
+        public static final int idler=0x7f020009;
+        public static final int leave=0x7f02000a;
+        public static final int logo=0x7f02000b;
+        public static final int map_mode=0x7f02000c;
+        public static final int my_location=0x7f02000d;
+        public static final int rules=0x7f02000e;
+        public static final int runner=0x7f02000f;
+        public static final int treasure=0x7f020010;
     }
     public static final class id {
+        public static final int actionbar=0x7f0a000b;
         public static final int actionbar_actions=0x7f0a0006;
         public static final int actionbar_home=0x7f0a0001;
         public static final int actionbar_home_bg=0x7f0a0003;
@@ -62,12 +64,12 @@ containing a value of this type.
         public static final int actionbar_item=0x7f0a0009;
         public static final int actionbar_progress=0x7f0a0007;
         public static final int actionbar_title=0x7f0a0008;
-        public static final int hide=0x7f0a000c;
-        public static final int leave=0x7f0a000f;
-        public static final int map_mode=0x7f0a000d;
+        public static final int hide=0x7f0a000d;
+        public static final int leave=0x7f0a0010;
+        public static final int map_mode=0x7f0a000e;
         public static final int mapview=0x7f0a000a;
-        public static final int my_location=0x7f0a000b;
-        public static final int rules=0x7f0a000e;
+        public static final int my_location=0x7f0a000c;
+        public static final int rules=0x7f0a000f;
         public static final int screen=0x7f0a0000;
     }
     public static final class layout {

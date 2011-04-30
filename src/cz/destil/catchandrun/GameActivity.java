@@ -15,6 +15,7 @@ import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
+import com.markupartist.android.widget.ActionBar;
 
 public class GameActivity extends MapActivity implements OnGestureListener {
 
@@ -33,6 +34,8 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 		mapView = (MapView) findViewById(R.id.mapview);
 		mapView.setBuiltInZoomControls(true);
 		overlays = mapView.getOverlays();
+		ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
+	    actionBar.setHomeLogo(R.drawable.icon_actionbar);
 
 		// detect gestures
 		overlays.add(new MapGestureDetectorOverlay(this));
@@ -128,6 +131,12 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 	@Override
 	public void onBackPressed() {
 		checkExit();
+	}
+	
+	@Override
+	public void setTitle(CharSequence title) {
+		ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
+	    actionBar.setTitle(title);
 	}
 
 	private void showRules() {

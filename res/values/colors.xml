@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<color name="logo">#BFBFBF</color>
-<color name="title">#808080</color>
-<color name="title_text">#FFFFFF</color>
-    <color name="actionbar_separator">#8B1A1A</color>
-    <color name="actionbar_title">#FFFFFF</color>
-    <color name="actionbar_background_start">#8B1A1A</color>
-    <color name="actionbar_background_end">#CD2626</color>
-    <color name="actionbar_background_item_pressed_start">#FF7F00</color>
-    <color name="actionbar_background_item_pressed_end">#EE7600</color>
+	<color name="logo">#BFBFBF</color>
+	<color name="title">#808080</color>
+	<color name="title_text">#FFFFFF</color>
+	<color name="actionbar_separator">#8B1A1A</color>
+	<color name="actionbar_title">#FFFFFF</color>
+	<color name="actionbar_background_start">#cc808080</color>
+	<color name="actionbar_background_end">#cc808080</color>
+	<color name="actionbar_background_item_pressed_start">#ccFF7F00</color>
+	<color name="actionbar_background_item_pressed_end">#ccEE7600</color>
 </resources>

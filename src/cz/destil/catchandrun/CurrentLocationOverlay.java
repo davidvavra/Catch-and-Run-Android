@@ -67,7 +67,7 @@ public class CurrentLocationOverlay extends MyLocationOverlay {
 			infoText = context.getString(R.string.outside_area);
 			break;
 		}
-		context.setTitle("C&R: " + infoText);
+		context.setTitle(infoText);
 	}
 
 	@Override
