@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-	<item android:icon="@drawable/my_location" android:id="@+id/my_location"
-		android:title="@string/my_location"></item>
 	<item android:icon="@drawable/hide" android:id="@+id/hide"
 		android:title="@string/hide"></item>
 	<item android:icon="@drawable/map_mode" android:id="@+id/map_mode"

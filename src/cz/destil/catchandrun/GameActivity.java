@@ -10,12 +10,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
 
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
 import com.markupartist.android.widget.ActionBar;
+import com.markupartist.android.widget.ActionBar.Action;
 
 public class GameActivity extends MapActivity implements OnGestureListener {
 
@@ -36,6 +38,19 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 		overlays = mapView.getOverlays();
 		ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
 	    actionBar.setHomeLogo(R.drawable.icon_actionbar);
+	    actionBar.addAction(new Action() {
+			
+			@Override
+			public void performAction(View view) {
+				mapView.getController().animateTo(myLocation.getMyLocation());
+				myLocation.snapToLocation = true;
+			}
+			
+			@Override
+			public int getDrawable() {
+				return R.drawable.my_location;
+			}
+		});
 
 		// detect gestures
 		overlays.add(new MapGestureDetectorOverlay(this));
@@ -87,10 +102,6 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle item selection
 		switch (item.getItemId()) {
-		case R.id.my_location:
-			mapView.getController().animateTo(myLocation.getMyLocation());
-			myLocation.snapToLocation = true;
-			return true;
 		case R.id.hide:
 			myLocation.toggleHide();
 			return true;
@@ -190,20 +201,17 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 
 	@Override
 	public boolean onDown(MotionEvent e) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 			float velocityY) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public void onLongPress(MotionEvent e) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -216,13 +224,11 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 
 	@Override
 	public void onShowPress(MotionEvent e) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public boolean onSingleTapUp(MotionEvent e) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

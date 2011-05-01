@@ -32,7 +32,6 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import cz.destil.catchandrun.R;
 
 public class ActionBar extends RelativeLayout implements OnClickListener {
@@ -171,6 +170,9 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
      * @param action the action to add
      */
     public void addAction(Action action) {
+    	//add separator
+    	View separator = mInflater.inflate(R.layout.actionbar_separator, mActionsView, false);
+    	mActionsView.addView(separator);
         final int index = mActionsView.getChildCount();
         addAction(action, index);
     }

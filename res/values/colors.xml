@@ -3,10 +3,10 @@
 	<color name="logo">#BFBFBF</color>
 	<color name="title">#808080</color>
 	<color name="title_text">#FFFFFF</color>
-	<color name="actionbar_separator">#8B1A1A</color>
-	<color name="actionbar_title">#FFFFFF</color>
-	<color name="actionbar_background_start">#cc808080</color>
-	<color name="actionbar_background_end">#cc808080</color>
+	<color name="actionbar_separator">#cc808080</color>
+	<color name="actionbar_title">#000000</color>
+	<color name="actionbar_background_start">#ccBFBFBF</color>
+	<color name="actionbar_background_end">#ccBFBFBF</color>
 	<color name="actionbar_background_item_pressed_start">#ccFF7F00</color>
 	<color name="actionbar_background_item_pressed_end">#ccEE7600</color>
 </resources>

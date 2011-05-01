@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/actionbar_separator" android:layout_width="1dp"
+	android:layout_height="@dimen/actionbar_height" android:background="@color/actionbar_separator"
+	android:layout_margin="0dp" android:padding="0dp" />

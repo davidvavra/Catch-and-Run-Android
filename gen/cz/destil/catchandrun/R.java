@@ -54,7 +54,7 @@ containing a value of this type.
         public static final int treasure=0x7f020010;
     }
     public static final class id {
-        public static final int actionbar=0x7f0a000b;
+        public static final int actionbar=0x7f0a000c;
         public static final int actionbar_actions=0x7f0a0006;
         public static final int actionbar_home=0x7f0a0001;
         public static final int actionbar_home_bg=0x7f0a0003;
@@ -63,20 +63,21 @@ containing a value of this type.
         public static final int actionbar_home_logo=0x7f0a0002;
         public static final int actionbar_item=0x7f0a0009;
         public static final int actionbar_progress=0x7f0a0007;
+        public static final int actionbar_separator=0x7f0a000a;
         public static final int actionbar_title=0x7f0a0008;
         public static final int hide=0x7f0a000d;
         public static final int leave=0x7f0a0010;
         public static final int map_mode=0x7f0a000e;
-        public static final int mapview=0x7f0a000a;
-        public static final int my_location=0x7f0a000c;
+        public static final int mapview=0x7f0a000b;
         public static final int rules=0x7f0a000f;
         public static final int screen=0x7f0a0000;
     }
     public static final class layout {
         public static final int actionbar=0x7f030000;
         public static final int actionbar_item=0x7f030001;
-        public static final int main=0x7f030002;
-        public static final int map=0x7f030003;
+        public static final int actionbar_separator=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int map=0x7f030004;
     }
     public static final class menu {
         public static final int map_menu=0x7f090000;
