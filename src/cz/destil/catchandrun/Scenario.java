@@ -44,7 +44,6 @@ public class Scenario {
 			int lat = (int) (Double.parseDouble(tokenizer2.nextToken()) * 1e6);
 			GeoPoint point = new GeoPoint(lat, lon);
 			borders.add(point);
-			System.out.println("adding " + point);
 		}
 		context.border.setGeoPoints(borders);
 
