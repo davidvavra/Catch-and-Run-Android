@@ -80,6 +80,9 @@ public class TreasuresOverlay extends ItemizedOverlay<Treasure> {
 				treasure.getPoint());
 		String message = context.getString(R.string.treasure_value) + " ("
 				+ distance + " m)";
+		
+		context.tracker.trackEvent("Clicks", "Treasure", message, treasure.money);
+		
 		int navigateButton;
 		if (treasure.navigateTo)
 			navigateButton = R.string.stop_navigation;

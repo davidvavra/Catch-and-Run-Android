@@ -138,6 +138,9 @@ public class PlayersOverlay extends ItemizedOverlay<Player> {
 			break;
 		}
 		String message = distance + " m, " + role + ", $" + player.money;
+		
+		context.tracker.trackEvent("Clicks", "Player", message, player.money);
+		
 		int navigateButton;
 		if (player.navigateTo)
 			navigateButton = R.string.stop_navigation;

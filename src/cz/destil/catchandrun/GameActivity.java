@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.google.android.apps.analytics.GoogleAnalyticsTracker;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
@@ -28,6 +29,7 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 	PlayersOverlay players;
 	TreasuresOverlay treasures;
 	Scenario scenario;
+	public GoogleAnalyticsTracker tracker;
 
 	@Override
 	protected void onCreate(Bundle icicle) {
@@ -42,6 +44,7 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 			
 			@Override
 			public void performAction(View view) {
+				tracker.trackEvent("Clicks", "My Location", "Action selected", 0);
 				mapView.getController().animateTo(myLocation.getMyLocation());
 				myLocation.snapToLocation = true;
 			}
@@ -72,9 +75,31 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 		myLocation.enableMyLocation();
 		overlays.add(myLocation);
 
+		//enable tracking
+		tracker = GoogleAnalyticsTracker.getInstance();
+		tracker.start("UA-337476-13", 10, this);
+		
 		// start scenarios
 		scenario = new Scenario(this);
 		scenario.start();
+	}
+	
+	@Override
+	protected void onStop() {
+	    tracker.dispatch();
+	    super.onStop();
+	}
+	
+	@Override
+	protected void onDestroy() {
+	    tracker.stop();
+	    super.onDestroy();
+	}
+	
+	@Override
+	protected void onStart() {
+	    tracker.trackPageView("/game");
+	    super.onStart();
 	}
 
 	public GeoPoint getMyGeoPoint() {
@@ -104,6 +129,7 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 		switch (item.getItemId()) {
 		case R.id.hide:
 			myLocation.toggleHide();
+			tracker.trackEvent("Clicks", "Hide/Show", "Menu selected", 0);
 			return true;
 		case R.id.map_mode:
 			if (mapView.isSatellite()) {
@@ -111,11 +137,14 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 			} else {
 				mapView.setSatellite(true);
 			}
+			tracker.trackEvent("Clicks", "Map mode", "Menu selected", 0);
 			return true;
 		case R.id.leave:
+			tracker.trackEvent("Clicks", "Leave", "Menu selected", 0);
 			checkExit();
 			return true;
 		case R.id.rules:
+			tracker.trackEvent("Clicks", "Rules", "Menu selected", 0);
 			showRules();
 			return true;
 		default:
@@ -126,21 +155,22 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 	@Override
 	public boolean onMenuOpened(int featureId, Menu menu) {
 		if (mapView.isSatellite()) {
-			menu.getItem(2).setTitle(R.string.street_map);
+			menu.getItem(1).setTitle(R.string.street_map);
 		} else {
-			menu.getItem(2).setTitle(R.string.satellite_map);
+			menu.getItem(1).setTitle(R.string.satellite_map);
 		}
 
 		if (myLocation.role == Common.HIDDEN) {
-			menu.getItem(1).setTitle(R.string.reveal);
+			menu.getItem(0).setTitle(R.string.reveal);
 		} else {
-			menu.getItem(1).setTitle(R.string.hide);
+			menu.getItem(0).setTitle(R.string.hide);
 		}
 		return super.onMenuOpened(featureId, menu);
 	}
 	
 	@Override
 	public void onBackPressed() {
+		tracker.trackEvent("Clicks", "Leave", "Back selected", 0);
 		checkExit();
 	}
 	
@@ -189,6 +219,8 @@ public class GameActivity extends MapActivity implements OnGestureListener {
 	
 	private void exit()
 	{
+		tracker.setCustomVar(1, "Final score $", String.valueOf(myLocation.money));
+		tracker.trackEvent("Game Events", "End", "Game end", myLocation.money);
 		scenario.timer.cancel();
 		myLocation.disableMyLocation();
 		finish();

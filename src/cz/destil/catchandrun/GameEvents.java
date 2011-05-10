@@ -42,6 +42,7 @@ public class GameEvents {
 					+ " " + context.getString(R.string.from_player) + " "
 					+ otherPlayer.name;
 			sound = R.raw.won;
+			context.tracker.trackEvent("Game Events", "Won", "Won with "+otherPlayer.name, price);
 			break;
 		case (LOST):
 			price = myPlayer.money / 2;
@@ -54,6 +55,7 @@ public class GameEvents {
 					+ " " + context.getString(R.string.to_player) + " "
 					+ otherPlayer.name;
 			sound = R.raw.lost;
+			context.tracker.trackEvent("Game Events", "Lost", "Lost with "+otherPlayer.name, price);
 			break;
 		case (BECAME_CATCHER):
 			context.players.changeState(otherPlayer, Common.RUNNER, 0);
@@ -63,6 +65,7 @@ public class GameEvents {
 			alertText = context.getString(R.string.catch_player) + " "
 					+ otherPlayer.name + " " + context.getString(R.string.asap);
 			sound = R.raw.catcher;
+			context.tracker.trackEvent("Game Events", "Catcher", "Became catcher with "+otherPlayer.name, 0);
 			break;
 		case (BECAME_RUNNER):
 			context.players.changeState(otherPlayer, Common.CATCHER, 0);
@@ -72,6 +75,7 @@ public class GameEvents {
 			alertText = context.getString(R.string.run_away_from) + " "
 					+ otherPlayer.name + "!";
 			sound = R.raw.runner;
+			context.tracker.trackEvent("Game Events", "Runner", "Became runner with "+otherPlayer.name, 0);
 			break;
 		case (TREASURE_FOUND):
 			treasure.navigateTo = false;
@@ -82,6 +86,7 @@ public class GameEvents {
 					+ treasure.money + " "
 					+ context.getString(R.string.inside_treasure_chest);
 			sound = R.raw.tada;
+			context.tracker.trackEvent("Game Events", "Treasure", "Treasure found", treasure.money);
 			break;
 		}
 

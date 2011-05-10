@@ -113,6 +113,8 @@ public class CurrentLocationOverlay extends MyLocationOverlay {
 			} else {
 				hideButton = R.string.hide;
 			}
+			
+			context.tracker.trackEvent("Clicks", "My Location", infoText, money);
 
 			new AlertDialog.Builder(context)
 					.setTitle(name)
@@ -121,6 +123,7 @@ public class CurrentLocationOverlay extends MyLocationOverlay {
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
 										int id) {
+									context.tracker.trackEvent("Clicks", "Hide/Show", "from My Location", 0);
 									toggleHide();
 								}
 							})
